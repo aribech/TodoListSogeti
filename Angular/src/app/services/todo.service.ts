@@ -19,4 +19,10 @@ export class TodoService {
   { 
     return this.http.get<Todo>(this.todoUrl+id);
   }
+
+  updateTodo(id:number,updatedTodo: Todo):Observable<Todo>
+  {
+    return this.http.put<Todo>(this.todoUrl+id,updatedTodo);
+  }
+  
 }

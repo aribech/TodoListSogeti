@@ -1,5 +1,6 @@
 # Ignore node_modules directory
 node_modules/
+Angular/.Angular
 
 # Ignore bin and obj directories within API/TODOListApi
 API/TODOListApi/bin/

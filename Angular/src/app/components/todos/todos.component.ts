@@ -29,9 +29,20 @@ export class TodosComponent implements OnInit {
     .subscribe({
       next:(data)=>{
         this.todos=data;
+        //reorder todos
+        const doneTodos = this.todos.filter(todo => todo.done);
+        const undoneTodos = this.todos.filter(todo => !todo.done);
+        this.todos = [...undoneTodos, ...doneTodos];
       }
     });
-
   }
 
+  onDoneChanged(todo: Todo) {
+    todo.done = !todo.done;
+    this.todoService.updateTodo(todo.id,todo).subscribe({
+      next:(data)=>{
+        this.getTodos();
+      }
+    });
+  }
 }

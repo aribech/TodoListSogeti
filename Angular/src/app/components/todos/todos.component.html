@@ -4,13 +4,18 @@
             <thead>
                 <tr>
                   <th scope="col">Title</th>
+                  <th scope="col">Done</th>
                 </tr>
+                
             </thead>
             <tbody>
-            <tr *ngFor="let todo of todos; index as i;" [ngClass]=" { 'table-success' :todo.done}" >
+            <tr *ngFor="let todo of todos; index as i;" [ngClass]=" { 'crossed-out' :todo.done}" >
               <td>
                 {{todo.title}}
                 
+              </td>
+              <td> <input type="checkbox" [checked]="todo.done"
+                (change)="onDoneChanged(todo)">
               </td>
             </tr>
             </tbody>
