@@ -19,7 +19,7 @@ namespace TODOListApi.Controllers
         {
             try
             {
-                var todos = _todoService.GetTodos();
+                var todos = _todoService.GetTodos().OrderByDescending(t=>t.Id);
                 return Ok(todos);
             }
             catch (Exception ex)

@@ -29,5 +29,9 @@ export class TodoService {
   {
     return this.http.delete<Todo>(this.todoUrl+id);
   }
+  addTodo(newTodo: Todo):Observable<Todo>
+  {
+    return this.http.post<Todo>(this.todoUrl,newTodo);
+  }
   
 }
