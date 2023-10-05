@@ -5,3 +5,5 @@ Angular/.Angular
 # Ignore bin and obj directories within API/TODOListApi
 API/TODOListApi/bin/
 API/TODOListApi/obj/
+API/TodoListTest/bin/
+API/TodoListTest/obj/
