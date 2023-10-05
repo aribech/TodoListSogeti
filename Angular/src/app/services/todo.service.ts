@@ -24,5 +24,10 @@ export class TodoService {
   {
     return this.http.put<Todo>(this.todoUrl+id,updatedTodo);
   }
+
+  deleteTodo(id:number):Observable<Todo>
+  {
+    return this.http.delete<Todo>(this.todoUrl+id);
+  }
   
 }

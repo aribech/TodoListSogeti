@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent,
+    TodoDetailsComponent
   ],
   imports: [
     BrowserModule,
